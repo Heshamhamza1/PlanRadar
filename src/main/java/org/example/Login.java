@@ -18,7 +18,7 @@ public class Login {
 
         email.sendKeys("heshamhamza1997@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div/div/form/button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         driver.findElement(By.id("password")).sendKeys("27121997H");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div/div/form/button")).click();
     }
