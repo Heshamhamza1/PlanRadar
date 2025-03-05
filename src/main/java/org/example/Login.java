@@ -15,7 +15,6 @@ public class Login {
     public static void InsertEmail (WebDriver driver) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         WebElement email = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
-
         email.sendKeys("heshamhamza1997@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div/div[2]/div/div/form/button")).click();
         WebElement password = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));

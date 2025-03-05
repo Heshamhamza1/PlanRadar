@@ -16,8 +16,8 @@ public class perfomActions {
         // Click on the title field (better XPath for stability)
         WebElement title = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/div[2]/span")));
         title.click();
-        // Wait for the input field using data-testid
-        WebElement defaultTitle = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[1]/div/aside/div/div[2]/div/div/div/div/div/input")));
+        // Wait for the input field using data-id
+        WebElement defaultTitle = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_Title_DefaultValue']")));
         // Ensure the field is editable before clearing
         Thread.sleep(2000);
         defaultTitle.clear();
@@ -26,7 +26,7 @@ public class perfomActions {
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/div/div[2]/span")).click();
-        WebElement shortText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[1]/div/aside/div/div[2]/div/div/div/div/div/input")));
+        WebElement shortText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_ShortText_DefaultValue']")));
         // Ensure the field is editable before clearing
         shortText.click();
         shortText.clear();
@@ -36,7 +36,7 @@ public class perfomActions {
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[2]/span")).click();
-        WebElement longText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[1]/div/aside/div/div[2]/div/div/div/div/div/input")));
+        WebElement longText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_LongText_DefaultValue']")));
         // Ensure the field is editable before clearing
         longText.click();
         longText.clear();
