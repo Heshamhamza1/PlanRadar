@@ -20,7 +20,7 @@ public class perfomActions {
         Thread.sleep(2000);
         defaultTitle.clear();
         defaultTitle.sendKeys("Default Title");
-        defaultTitle.sendKeys(Keys.BACK_SPACE);
+
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/div/div[2]/span")).click();
@@ -30,7 +30,6 @@ public class perfomActions {
         shortText.clear();
         Thread.sleep(1000);
         shortText.sendKeys("Default short text");
-        shortText.sendKeys(Keys.BACK_SPACE);
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[2]/span")).click();
@@ -40,7 +39,6 @@ public class perfomActions {
         longText.clear();
         Thread.sleep(1000);
         longText.sendKeys("Default Long text");
-        longText.sendKeys(Keys.BACK_SPACE);
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[4]/div/div[2]/span")).click();
         WebElement checkBox = wait.until(ExpectedConditions.elementToBeClickable(By.id("Checked by default")));
