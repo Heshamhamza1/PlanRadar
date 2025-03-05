@@ -52,12 +52,11 @@ public class perfomActions {
         list.click();
         driver.findElement(By.id("Mandatory")).click();
         driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div[2]/div/button[1]/div")).click();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("/html/body/div[3]/div/header/div[2]/button[1]/div/span")).click();
 
-        WebElement close = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-testid='tickets_details_closenewticket']")));
-        Thread.sleep(5000);
-        close.click();
+        WebElement view = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/header/div[2]/button[1]/div/span")));
+        view.click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@data-testid='ticket-details-wrapper']")));
+
+        driver.findElement(By.xpath("//*[@data-testid='tickets_details_closenewticket']")).click();
     }
-
 }
