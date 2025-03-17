@@ -12,7 +12,7 @@ public class navigateForms {
     public static void Forms(WebDriver driver) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement targetElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[3]/div/div[2]/div[8]/div")));
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         Actions actions = new Actions(driver);
         actions.moveToElement(targetElement).perform();
         WebElement lists = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@data-testid='navigation_forms']")));
