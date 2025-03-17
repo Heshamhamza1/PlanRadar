@@ -11,7 +11,7 @@ public class navigateUrl {
         driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait( driver , Duration.ofSeconds(1));
         driver.findElement(By.xpath("/html/body/dialog/div[2]/div/div[2]/div[2]/div[2]/div[3]/button")).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"menu-item-26230\"]/a")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"menu-item-26230\"]/a")));
         driver.findElement(By.xpath("//*[@id=\"menu-item-26230\"]/a")).click();
     }
 }

@@ -17,33 +17,33 @@ public class perfomActions {
 
         WebElement defaultTitle = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_Title_DefaultValue']")));
 
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         defaultTitle.clear();
         defaultTitle.sendKeys("Default Title");
 
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/div/div[2]/span")).click();
         WebElement shortText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_ShortText_DefaultValue']")));
         shortText.click();
         shortText.clear();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         shortText.sendKeys("Default short text");
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[2]/span")).click();
         WebElement longText = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@data-id='Setup_Forms_LongText_DefaultValue']")));
 
         longText.click();
         longText.clear();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         longText.sendKeys("Default Long text");
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[4]/div/div[2]/span")).click();
         WebElement checkBox = wait.until(ExpectedConditions.elementToBeClickable(By.id("Checked by default")));
 
         checkBox.click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         WebElement element = driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div/div/div[5]/div/div[1]"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
